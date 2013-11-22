@@ -1,0 +1,1087 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY dime_novels "http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/a1691506/ontologies/2013/9/untitled-ontology-18#"
+     xml:base="http://www.semanticweb.org/a1691506/ontologies/2013/9/untitled-ontology-18"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dime_novels="http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#contributor -->
+
+    <owl:AnnotationProperty rdf:about="&dime_novels;contributor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#creator -->
+
+    <owl:AnnotationProperty rdf:about="&dime_novels;creator"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#date -->
+
+    <owl:AnnotationProperty rdf:about="&dime_novels;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#absorbs -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;absorbs">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_series_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#continues -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;continues">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_series_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#continues_in_part -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;continues_in_part">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_series_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_abridgement -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_abridgement">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:label>has_abridgement</rdfs:label>
+        <owl:inverseOf rdf:resource="&dime_novels;is_abridgement_of"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_story_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_adaption -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_adaption">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:label>has_adaptation</rdfs:label>
+        <owl:inverseOf rdf:resource="&dime_novels;is_adaptation_of"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_story_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_creator -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_creator">
+        <rdfs:label>has_creator</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_responsible_entity"/>
+        <rdfs:range rdf:resource="&dime_novels;responsible_entity"/>
+        <rdfs:domain rdf:resource="&dime_novels;story"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_embodiment -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_embodiment">
+        <rdfs:label>has_embodiment</rdfs:label>
+        <owl:inverseOf rdf:resource="&dime_novels;is_embodiment_of"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_publication_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_exemplar -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_exemplar">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_publication_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_illustrator -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_illustrator">
+        <rdfs:domain rdf:resource="&dime_novels;edition"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_responsible_entity"/>
+        <rdfs:range rdf:resource="&dime_novels;responsible_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_owner -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_owner">
+        <rdfs:label>has_owner</rdfs:label>
+        <rdfs:domain rdf:resource="&dime_novels;copy"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_responsible_entity"/>
+        <rdfs:range rdf:resource="&dime_novels;responsible_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_part -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_part">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>has_part</rdfs:label>
+        <rdfs:comment>Parts of parts are parts of the whole.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&dime_novels;is_part_of"/>
+        <rdfs:range rdf:resource="&dime_novels;issue"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_publication_entity"/>
+        <rdfs:domain rdf:resource="&dime_novels;series"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_publisher -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_publisher">
+        <rdfs:label>has_publisher</rdfs:label>
+        <owl:inverseOf rdf:resource="&dime_novels;is_publisher_of"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_responsible_entity"/>
+        <rdfs:range rdf:resource="&dime_novels;responsible_entity"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dime_novels;edition"/>
+                    <rdf:Description rdf:about="&dime_novels;issue"/>
+                    <rdf:Description rdf:about="&dime_novels;series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_realization -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_realization">
+        <rdfs:label>has_realization</rdfs:label>
+        <owl:inverseOf rdf:resource="&dime_novels;is_realization_of"/>
+        <rdfs:range rdf:resource="&dime_novels;issue"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_publication_entity"/>
+        <rdfs:domain rdf:resource="&dime_novels;story"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_reproduction -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_reproduction">
+        <owl:inverseOf rdf:resource="&dime_novels;is_reproduction_of"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_edition_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_subject -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;has_subject">
+        <rdfs:label>has_subject</rdfs:label>
+        <rdfs:range rdf:resource="&dime_novels;conceptual_entity"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;realted_concept_entity"/>
+        <rdfs:domain rdf:resource="&dime_novels;story"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_abridgement_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_abridgement_of">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_story_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_absorbed_by -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_absorbed_by">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_series_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_adaptation_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_adaptation_of">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_story_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_continued_by -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_continued_by">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_series_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_continued_in_part_by -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_continued_in_part_by">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_series_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_creator_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_creator_of">
+        <rdfs:label>is_creator_of</rdfs:label>
+        <owl:inverseOf rdf:resource="&dime_novels;has_creator"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_responsible_entity"/>
+        <rdfs:domain rdf:resource="&dime_novels;responsible_entity"/>
+        <rdfs:range rdf:resource="&dime_novels;story"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_embodiment_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_embodiment_of">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_publication_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_exemplar_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_exemplar_of">
+        <owl:inverseOf rdf:resource="&dime_novels;has_exemplar"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_publication_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_illustrator_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_illustrator_of">
+        <rdfs:range rdf:resource="&dime_novels;edition"/>
+        <owl:inverseOf rdf:resource="&dime_novels;has_illustrator"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_responsible_entity"/>
+        <rdfs:domain rdf:resource="&dime_novels;responsible_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_merger_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_merger_of">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_series_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_owner_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_owner_of">
+        <rdfs:label>is_owner_of</rdfs:label>
+        <rdfs:range rdf:resource="&dime_novels;copy"/>
+        <owl:inverseOf rdf:resource="&dime_novels;has_owner"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_responsible_entity"/>
+        <rdfs:domain rdf:resource="&dime_novels;responsible_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_part_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_part_of">
+        <rdfs:domain rdf:resource="&dime_novels;issue"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_publication_entity"/>
+        <rdfs:range rdf:resource="&dime_novels;series"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_publisher_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_publisher_of">
+        <rdfs:label>is_publisher_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_responsible_entity"/>
+        <rdfs:domain rdf:resource="&dime_novels;responsible_entity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dime_novels;edition"/>
+                    <rdf:Description rdf:about="&dime_novels;issue"/>
+                    <rdf:Description rdf:about="&dime_novels;series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_realization_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_realization_of">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_publication_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_reproduction_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_reproduction_of">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_edition_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_subject_of -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_subject_of">
+        <rdfs:label>is_subject_of</rdfs:label>
+        <rdfs:domain rdf:resource="&dime_novels;conceptual_entity"/>
+        <owl:inverseOf rdf:resource="&dime_novels;has_subject"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;realted_concept_entity"/>
+        <rdfs:range rdf:resource="&dime_novels;story"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#is_superceded_by -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;is_superceded_by">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_series_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#merges_with -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;merges_with">
+        <rdfs:comment>reification? z is the merger of (x merges with y, y merges with x)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_series_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#realted_concept_entity -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;realted_concept_entity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#related_edition_entity -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;related_edition_entity">
+        <rdfs:range rdf:resource="&dime_novels;edition"/>
+        <rdfs:domain rdf:resource="&dime_novels;edition"/>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_publication_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#related_publication_entity -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;related_publication_entity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#related_responsible_entity -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;related_responsible_entity">
+        <rdfs:label>responsible_entity</rdfs:label>
+        <rdfs:label>has_responsible_entity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#related_series_entity -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;related_series_entity">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_publication_entity"/>
+        <rdfs:range rdf:resource="&dime_novels;series"/>
+        <rdfs:domain rdf:resource="&dime_novels;series"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#related_story_entity -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;related_story_entity">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_publication_entity"/>
+        <rdfs:domain rdf:resource="&dime_novels;story"/>
+        <rdfs:range rdf:resource="&dime_novels;story"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#split_into -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;split_into">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_series_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#supercedes -->
+
+    <owl:ObjectProperty rdf:about="&dime_novels;supercedes">
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;related_series_entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_alternate_title -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_alternate_title">
+        <rdfs:label>has_alternate_title</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_title"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dime_novels;edition"/>
+                    <rdf:Description rdf:about="&dime_novels;issue"/>
+                    <rdf:Description rdf:about="&dime_novels;series"/>
+                    <rdf:Description rdf:about="&dime_novels;story"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_classification -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_classification">
+        <rdfs:label>has_classification</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_identifier"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dime_novels;edition"/>
+                    <rdf:Description rdf:about="&dime_novels;series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_copyright_date -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_copyright_date">
+        <rdfs:label>has_copyright_date</rdfs:label>
+        <rdfs:comment>Possible for an issue or edition to have multiple copyright dates, and so this property cannot be functional</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_date"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dime_novels;edition"/>
+                    <rdf:Description rdf:about="&dime_novels;issue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_cover_date -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_cover_date">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>has_cover_date</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_date"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dime_novels;edition"/>
+                    <rdf:Description rdf:about="&dime_novels;issue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_creation_date -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_creation_date">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>has_creation_date</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_date"/>
+        <rdfs:domain rdf:resource="&dime_novels;story"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_date -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_date">
+        <rdfs:label>has_date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_edition_statement -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_edition_statement">
+        <rdfs:label>has_edition_statement</rdfs:label>
+        <rdfs:comment>A single edition may have multiple edition statements.</rdfs:comment>
+        <rdfs:domain rdf:resource="&dime_novels;edition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_enumeration -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_enumeration">
+        <rdfs:label>has_enumeration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_identifier -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_identifier">
+        <rdfs:label>has_identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_issue_count -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_issue_count">
+        <rdfs:label>has_issue_count</rdfs:label>
+        <rdfs:domain rdf:resource="&dime_novels;series"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_number -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_number">
+        <rdfs:label>has_issue_number</rdfs:label>
+        <rdfs:comment>Issues may have multiple enumeration patterns (e.g. old series and new series numbering).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_enumeration"/>
+        <rdfs:domain rdf:resource="&dime_novels;issue"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_oclc -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_oclc">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>has_oclc</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_identifier"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dime_novels;edition"/>
+                    <rdf:Description rdf:about="&dime_novels;series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_page_count -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_page_count">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>has_page_count</rdfs:label>
+        <rdfs:comment>Does it make sense for an issue to have page numbers?</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dime_novels;copy"/>
+                    <rdf:Description rdf:about="&dime_novels;edition"/>
+                    <rdf:Description rdf:about="&dime_novels;issue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_publication_date -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_publication_date">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>has_publication_date</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_date"/>
+        <rdfs:domain rdf:resource="&dime_novels;series"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_publication_frequency -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_publication_frequency">
+        <rdfs:domain rdf:resource="&dime_novels;series"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>monthly</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>weekly</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_section_count -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_section_count">
+        <rdfs:label>has_section_count</rdfs:label>
+        <rdfs:comment>An issue can have multiple sections (e.g. chapters), but an edition might have more or less than the same number.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dime_novels;edition"/>
+                    <rdf:Description rdf:about="&dime_novels;issue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_section_number -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_section_number">
+        <rdfs:comment>has_section_number</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_enumeration"/>
+        <rdfs:domain rdf:resource="&dime_novels;issue"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_series_number -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_series_number">
+        <rdfs:label>has_series_number</rdfs:label>
+        <rdfs:comment>Issues may have multiple enumeration patterns (e.g. old series and new series numbering).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_enumeration"/>
+        <rdfs:domain rdf:resource="&dime_novels;issue"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_subtitle -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_subtitle">
+        <rdfs:label>has_subtitle</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_title"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dime_novels;edition"/>
+                    <rdf:Description rdf:about="&dime_novels;issue"/>
+                    <rdf:Description rdf:about="&dime_novels;series"/>
+                    <rdf:Description rdf:about="&dime_novels;story"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_title -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_title">
+        <rdfs:label>has_title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_url -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_url">
+        <rdfs:label>has_url</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_identifier"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dime_novels;conceptual_entity"/>
+                    <rdf:Description rdf:about="&dime_novels;publication_entity"/>
+                    <rdf:Description rdf:about="&dime_novels;responsible_entity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_viaf -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_viaf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>has_viaf</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_identifier"/>
+        <rdfs:domain rdf:resource="&dime_novels;responsible_entity"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_volume -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_volume">
+        <rdfs:label>has_volume_number</rdfs:label>
+        <rdfs:comment>Issues may have multiple enumeration patterns (e.g. old series and new series numbering).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&dime_novels;has_enumeration"/>
+        <rdfs:domain rdf:resource="&dime_novels;issue"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#has_volume_count -->
+
+    <owl:DatatypeProperty rdf:about="&dime_novels;has_volume_count">
+        <rdfs:label>has_volume_count</rdfs:label>
+        <rdfs:domain rdf:resource="&dime_novels;series"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#character -->
+
+    <owl:Class rdf:about="&dime_novels;character">
+        <rdfs:label>character</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;conceptual_entity"/>
+        <owl:disjointWith rdf:resource="&dime_novels;genre"/>
+        <owl:disjointWith rdf:resource="&dime_novels;place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#conceptual_entity -->
+
+    <owl:Class rdf:about="&dime_novels;conceptual_entity">
+        <rdfs:label>conceptual_entity</rdfs:label>
+        <owl:disjointWith rdf:resource="&dime_novels;publication_entity"/>
+        <owl:disjointWith rdf:resource="&dime_novels;responsible_entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#copy -->
+
+    <owl:Class rdf:about="&dime_novels;copy">
+        <rdfs:label>copy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;publication_entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dime_novels;is_exemplar_of"/>
+                <owl:someValuesFrom rdf:resource="&dime_novels;edition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&dime_novels;edition"/>
+        <owl:disjointWith rdf:resource="&dime_novels;issue"/>
+        <owl:disjointWith rdf:resource="&dime_novels;series"/>
+        <owl:disjointWith rdf:resource="&dime_novels;story"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#corporate_body -->
+
+    <owl:Class rdf:about="&dime_novels;corporate_body">
+        <rdfs:label>corporate_body</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;responsible_entity"/>
+        <owl:disjointWith rdf:resource="&dime_novels;person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#dime_novel -->
+
+    <owl:Class rdf:about="&dime_novels;dime_novel">
+        <rdfs:label>dime_novel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;series"/>
+        <owl:disjointWith rdf:resource="&dime_novels;story_paper"/>
+        <owl:disjointWith rdf:resource="&dime_novels;weekly"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#edition -->
+
+    <owl:Class rdf:about="&dime_novels;edition">
+        <rdfs:label>edition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;publication_entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dime_novels;is_embodiment_of"/>
+                <owl:someValuesFrom rdf:resource="&dime_novels;issue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dime_novels;has_exemplar"/>
+                <owl:someValuesFrom rdf:resource="&dime_novels;copy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&dime_novels;issue"/>
+        <owl:disjointWith rdf:resource="&dime_novels;series"/>
+        <owl:disjointWith rdf:resource="&dime_novels;story"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#genre -->
+
+    <owl:Class rdf:about="&dime_novels;genre">
+        <rdfs:label>genre</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;conceptual_entity"/>
+        <owl:disjointWith rdf:resource="&dime_novels;place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#issue -->
+
+    <owl:Class rdf:about="&dime_novels;issue">
+        <rdfs:label>issue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;publication_entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dime_novels;is_part_of"/>
+                <owl:someValuesFrom rdf:resource="&dime_novels;series"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dime_novels;has_exemplar"/>
+                <owl:someValuesFrom rdf:resource="&dime_novels;copy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dime_novels;is_realization_of"/>
+                <owl:someValuesFrom rdf:resource="&dime_novels;story"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&dime_novels;series"/>
+        <owl:disjointWith rdf:resource="&dime_novels;story"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#person -->
+
+    <owl:Class rdf:about="&dime_novels;person">
+        <rdfs:label>person</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;responsible_entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#place -->
+
+    <owl:Class rdf:about="&dime_novels;place">
+        <rdfs:label>place</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;conceptual_entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#publication_entity -->
+
+    <owl:Class rdf:about="&dime_novels;publication_entity">
+        <rdfs:label>publication_entity</rdfs:label>
+        <owl:disjointWith rdf:resource="&dime_novels;responsible_entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#responsible_entity -->
+
+    <owl:Class rdf:about="&dime_novels;responsible_entity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#series -->
+
+    <owl:Class rdf:about="&dime_novels;series">
+        <rdfs:label>series</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;publication_entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dime_novels;has_part"/>
+                <owl:someValuesFrom rdf:resource="&dime_novels;issue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&dime_novels;story"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#story -->
+
+    <owl:Class rdf:about="&dime_novels;story">
+        <rdfs:label>story</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;publication_entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dime_novels;has_realization"/>
+                <owl:someValuesFrom rdf:resource="&dime_novels;issue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#story_paper -->
+
+    <owl:Class rdf:about="&dime_novels;story_paper">
+        <rdfs:label>story_paper</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;series"/>
+        <owl:disjointWith rdf:resource="&dime_novels;weekly"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#weekly -->
+
+    <owl:Class rdf:about="&dime_novels;weekly">
+        <rdfs:label>weekly</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&dime_novels;series"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dime_novels;has_publication_frequency"/>
+                <owl:hasValue>weekly</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#annually -->
+
+    <owl:NamedIndividual rdf:about="&dime_novels;annually"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#bi-weekly -->
+
+    <owl:NamedIndividual rdf:about="&dime_novels;bi-weekly"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#monthly -->
+
+    <owl:NamedIndividual rdf:about="&dime_novels;monthly"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#weekly -->
+
+    <owl:NamedIndividual rdf:about="&dime_novels;weekly"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
