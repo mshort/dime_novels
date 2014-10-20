@@ -1,4 +1,4 @@
-import urllib, requests, re, json, csv
+import urllib, requests, re, json, csv, sys
 #from BeautifulSoup import BeautifulSoup
 from rdflib import Graph, Literal, BNode, Namespace, RDF, URIRef
 
@@ -132,11 +132,15 @@ def getAbstract(wkp):
     abstract = ''.join(query.result[0]).encode('utf-8')
 
     return abstract
+    
+def main(argv):
+	
+	names = getURIs()
 
-
-names = getURIs()
-
-with open('G:/scripts/dime_names.csv', 'wb') as f:
-	writer = csv.writer(f)
-	for key, value in names.items():
-		writer.writerow([key] + value)
+	with open('G:/scripts/dime_names.csv', 'wb') as f:
+		writer = csv.writer(f)
+		for key, value in names.items():
+			writer.writerow([key] + value)
+		
+if __name__ == '__main__':
+    sys.exit(main(sys.argv))
