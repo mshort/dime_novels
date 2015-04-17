@@ -1,5 +1,5 @@
 import urllib, requests, re, json, csv, sys
-#from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 from rdflib import Graph, Literal, BNode, Namespace, RDF, URIRef
 
 def getNames():
@@ -8,27 +8,27 @@ def getNames():
 
     #Read names from text files
 
-    with open ('G:/scripts/voyager_names.txt', 'r') as text:
-        count = 1
-        for line in text:
-            name = line.rstrip('\n')
-            l = []
-            l.append(name)
-            names[count]=l
-            count += 1
+#    with open ('G:/scripts/voyager_names.txt', 'r') as text:
+#        count = 1
+#        for line in text:
+#            name = line.rstrip('\n')
+#            l = []
+#            l.append(name)
+#            names[count]=l
+#            count += 1
 
     # Scrape names from dimenovels.org    
      
-#    soup = BeautifulSoup(urllib.urlopen('http://dimenovels.org/People'))
+    soup = BeautifulSoup(urllib.urlopen('http://dimenovels.org/People'))
 
-#    for a in soup.findAll('a'):
-#	if a.has_key('href'):
-#		if re.match(r'\/([A-Z])\w+\/[0-9]+', a['href'], re.UNICODE):
-#			href = a['href']
-#			name = a.contents[0].lstrip().rstrip().encode('utf-8')
-#			l = []
-#			l.append(name)
-#			names[href] = l
+    for a in soup.findAll('a'):
+        if a.has_key('href'):
+            if re.match(r'\/([A-Z])\w+\/[0-9]+', a['href'], re.UNICODE):
+                href = a['href']
+                name = a.contents[0].lstrip().rstrip().encode('utf-8')
+                l = []
+                l.append(name)
+                names[href] = l
 
     return names
 
@@ -115,7 +115,7 @@ def getURIs():
 
 def getAbstract(wkp):
 
-    wkp urllib.quote(wkp)
+    wkp = urllib.quote(wkp)
 
     url = 'http://dbpedia.org/data/%s.ntriples' % wkp
     
@@ -137,7 +137,7 @@ def main(argv):
 	
 	names = getURIs()
 
-	with open('G:/scripts/dime_names.csv', 'wb') as f:
+	with open('G:/scripts/dime_names_2015_04_17.csv', 'wb') as f:
 		writer = csv.writer(f)
 		for key, value in names.items():
 			writer.writerow([key] + value)
