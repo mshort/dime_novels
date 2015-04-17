@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels#"
-     xml:base="http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels"
+<rdf:RDF xmlns="http://dimenovels.org/ontology#"
+     xml:base="http://dimenovels.org/ontology"
      xmlns:RegAp="http://metadataregistry.org/uri/profile/RegAp/"
      xmlns:webprotege="http://protege.stanford.edu/webprotege/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,7 +9,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/a1691506/ontologies/2013/9/dime_novels">
+    <owl:Ontology rdf:about="http://dimenovels.org/ontology">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
         <webprotege:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</webprotege:revision>
         <webprotege:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">53</webprotege:revision>
